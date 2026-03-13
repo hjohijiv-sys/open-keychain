@@ -21,8 +21,12 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        // needed for some legacy libs that aren't available on mavenCentral
-        jcenter()
+
+        // mirror do jcenter (necessário para libs antigas)
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+
+        // dependências hospedadas no GitHub
+        maven { url "https://jitpack.io" }
     }
 }
 
